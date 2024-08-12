@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLH Slider</title>
+    <style>
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+  
+  height: 500px;
+  width: 700px;
+  background-size: cover;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    object-position: center;
+    margin-top: 90px;
+}
+.btn1,.btn2{
+    height: 400px;
+    width: 100px;
+   border: none;
+    font-size: 70px;
+    background-color: transparent;
+    margin: 40px 40px;
+}
+    </style>
+</head>
+<body>
+    <div class="more">
+        <button class="btn1"  onclick="runFor()">⬅️</button>
+        <div class="card">
+            <img id="image" class="container" src="mlh2.avif">
+             <h1 id="put">ujwfbwiuy</h1>
+            </img>
+        </div>
+                <button class="btn2" onclick="runBack()">➡️</button>
+    </div>
+</body>
+<script>
+arr=["Global Collaboration","Creative Freedom","Supportive Environment","Learning Opportunities","Community Building"];
+imgArr=["mlh1.jpg","mlh2.avif","mlh3.jpeg","mlh4.jpeg","mlh5.jpeg"];
+const div=document.getElementById('put')
+const img=document.getElementById('image')
+ i=0;
+function runFor(){
+    if(i===arr.length-1)
+{
+    i=0;
+}
+    i++;
+    div.innerHTML=arr[i];
+    img.src=imgArr[i];
+}
+function runBack(){
+    if(i===0)
+{
+    i=arr.length-1;
+}
+    i--;
+    div.innerHTML=arr[i];
+    img.src=imgArr[i];
+}
+
+</script>
+</html>
